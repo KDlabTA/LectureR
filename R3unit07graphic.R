@@ -71,7 +71,8 @@ View(diamonds)
 g + geom_histogram(breaks = seq(0, 3, by=.1), fill = "green", aes(x = carat)) + xlim(c(0, 3))
 g + geom_histogram(bins = 50, color = "blue", fill = "yellow", aes(x = carat))
 ggplot(data = diamonds) + geom_histogram(bins = 50, na.rm = TRUE, aes(x = carat)) + xlim(c(0, 3))
-#
+# non-finite values: out of the range limited by xlim
+# missing values: default na.rm = FALSE
 ggplot(data = diamonds) + geom_density(aes(x = carat), fill = "red")
 ggplot(data = diamonds) + geom_density(aes(x = carat), fill = "red", na.rm = TRUE) + xlim(c(0, 3))
 #
@@ -108,16 +109,16 @@ economics$month <- month(economics$date, label=TRUE)
 head(economics, 10)
 #
 # selection by which
-econ2010 <- economics[which(economics$year >= 2010), ]
-head(econ2010)
-str(econ2010)
-typeof(econ2010$year)
+econ2007 <- economics[which(economics$year >= 2007), ]
+head(econ2007)
+str(econ2007)
+typeof(econ2007$year)
 #
 # divide data into clusters by: group
-g <- ggplot(econ2010, aes(x=month, y=pop))
+g <- ggplot(econ2007, aes(x=month, y=pop))
 g + geom_line(aes(color=year))  # connect points of the same month
 g + geom_line(aes(color=year, group=year))  # connect points of the same year
-factor(econ2010$year)
+factor(econ2007$year)
 (g1 <- g + geom_line(aes(color=factor(year), group=year)))
 g + geom_line(aes(color=factor(year), size=1.2, group=year))
 #
