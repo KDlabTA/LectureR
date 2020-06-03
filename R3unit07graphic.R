@@ -10,6 +10,7 @@ if (!require(ggplot2)) {
   library(ggplot2)
 } # ggplot2
 str(diamonds)
+# ?tibble
 # histogram
 hist(diamonds$carat, main = "Carat Histogram", xlab = "Carat")
 hist(diamonds$price, main = "Price Histogram", xlab = "Price")
@@ -32,6 +33,8 @@ boxplot(diamonds)
 # [2] ggplot2 ------------------------------------------- #
 # geom_histogram, geom_density, geom_point
 ggplot(data = diamonds) + geom_histogram(aes(x = carat))
+# ggplot(data = diamonds) + geom_histogram(aes(x = carat),bins = 15)
+# ggplot(data = diamonds) + geom_histogram(aes(x = carat),binwidth = 0.1)
 ggplot(data = diamonds) + geom_density(aes(x = carat), fill = "grey50")
 ggplot(diamonds, aes(x = carat, y = price)) + geom_point()
 # ggplot(diamonds) + geom_point(aes(x = carat, y = price))
@@ -58,7 +61,7 @@ ggplot(diamonds, aes(x = carat)) + geom_histogram() + facet_wrap(~ clarity)
 ggplot(diamonds, aes(y = carat, x = 1)) + geom_boxplot()
 ggplot(diamonds, aes(y = carat, x = cut)) + geom_boxplot()
 # 
-# geom_violins:
+# geom_violins: x is required
 ggplot(diamonds, aes(y = carat, x = 1)) + geom_violin()
 ggplot(diamonds, aes(y = carat, x = cut)) + geom_violin()
 ggplot(diamonds, aes(y = carat, x = cut)) + geom_boxplot() + geom_violin()
