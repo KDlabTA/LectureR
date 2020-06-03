@@ -11,12 +11,15 @@ rm(list=ls())
 ex <- list(num = 1:3, abc = letters[4:7], op = "+-*/", XYZ = LETTERS[-c(1:20)])
 rev(ex)
 #
-revList <- function(LL){ 
+revList <- function(LL){
+  # LL = ex
   ans <- LL
   names(ans) <- NULL
   for (i in 1:length(LL)){
+    # i = 1
     ans[i] <- LL[length(LL)-i+1]
     names(ans)[i] <- names(LL[length(LL)-i+1])
+    # i <- i+1
   } # for
   return(ans);
 } # revList
