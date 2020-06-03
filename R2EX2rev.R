@@ -3,7 +3,6 @@ rm(list=ls())
 ################################
 # named list inversion
 # ============================================================================== #
-# Try 4-1.
 # (1) Create a list with four elements of different data types
 # (2) Write a function to reverse the order of four elements in the list
 # Limitation: Try NOT to use any of the available commands such as rev().
