@@ -1,9 +1,8 @@
 # LectureR 2020
 ## Final projects
-1. 10520131: [PUBG輸贏影響因子分析](https://github.com/DONX3/10520131_hw "work in progress"){:target="_blank" rel="noopener"}
-2. 10527109: [寶可夢圖鑑](https://github.com/MBHAO/R-final---Pokedex "work in progress"){:target="_blank" rel="noopener norefferrer"}
+1. 10520131: [PUBG輸贏影響因子分析](https://github.com/DONX3/10520131_hw "work in progress")
+2. 10527109: [寶可夢圖鑑](https://github.com/MBHAO/R-final---Pokedex "work in progress")
 3. 10527153: [Fast Timing Model Estimation for new PVT](https://github.com/JerryFlyTiger/Fast_Timing_Model_Estimation_for_new_PVT "work in progress")
-4. <a href="http://google.com" target="_blank" rel="noopener">TEST</a>
 4. 10527201: [ShowMyPathOfLifeExperience](https://github.com/flygonty/R_Class "work in progress")
 5. 10527209: [NBA球員分析](https://github.com/KaiHsu0326/R_finalProject "work in progress")
 6. 10527214: [分析Netflix資料](https://github.com/fax77829yz/R_final_project "work in progress")
